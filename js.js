@@ -3,12 +3,12 @@ const square = document.createElement("div");
 square.setAttribute("class", "flex-square");
 
 function generateSquares() {
-    let size = 65; //Asymmetrical at 14...64 && size >= 66
+    let size = 54; //Asymmetrical at 14...64 && size >= 66
     let squareSize = 100 / size;
 
     for (let i = 0; i < (size * size); i++) {
         square.setAttribute("id", `square-${i + 1}`);
-        square.setAttribute("style", `height: calc(${squareSize}% - 4px); flex: 1 0 calc(${squareSize}% - 4px)`);
+        square.setAttribute("style", `height: ${squareSize}%;  width: ${squareSize}%;`);
         container.appendChild(square.cloneNode(true));
     }
 
