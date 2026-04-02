@@ -49,4 +49,17 @@ container.addEventListener("mouseover", (e) => {
 
 });
 
+rangeInput.addEventListener("keydown", (e) => {
+    if (e.code == "Enter") {
+        e.preventDefault();
+    }
+});
+
+rangeInput.addEventListener("keyup", (e) =>{
+    let value = e.target.value;
+    if (e.code == "Enter") {
+        generateSquares(value);
+    }
+});
+
 initializeSquares();
