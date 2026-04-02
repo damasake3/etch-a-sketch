@@ -16,11 +16,11 @@ body {
 }
 
 .sketch-box {
-    width: 960px;
-    max-width: 960px;
+    width: 640px;
+    max-width: 640px;
 
-    height: 960px;
-    max-height: 960px;
+    height: 480px;
+    max-height: 480px;
 }
 
 .flex-square {
