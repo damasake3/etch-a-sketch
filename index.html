@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="flex-container">
+    <div class="flex-container sketch-box"></div>
+
+    <div class="flex-container" style="flex-direction: column; flex-grow: 1;">
+        <h1 style="text-align: center;">Etch-A-Sketch</h1>
+
+        <div class="flex-container" style="gap: 10px;">
+
+            <form>
+                <label for="range">Set Range:</label>
+                <input type="number" id="range" name="range">
+                <button type="button" class="btn" onclick="generateSquares(range.value)">Submit</button>
+            </form>
+
+        </div>
+
     </div>
     <script src="js.js"></script>
 </body>
+
 </html>
