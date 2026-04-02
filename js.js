@@ -3,7 +3,7 @@ const square = document.createElement("div");
 square.setAttribute("class", "flex-square");
 
 function generateSquares() {
-    let size = 100; //14...65
+    let size = 65; //Asymmetrical at 14...64 && size >= 66
     let squareSize = 100 / size;
 
     for (let i = 0; i < (size * size); i++) {
