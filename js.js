@@ -1,4 +1,4 @@
-const container = document.querySelector(".flex-container");
+const container = document.querySelector(".sketch-box");
 const square = document.createElement("div");
 square.setAttribute("class", "flex-square");
 
@@ -25,11 +25,12 @@ function generateSquares() {
 
     });
 
-
 }
 
-
-
-
+function clearSquares() {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
 
 generateSquares();
