@@ -13,7 +13,7 @@ function generateSquares(s) {
     let squareSize = 100 / size;
     console.log(`size: ${s}`);
 
-    if (size < 1) {
+    if (size < 1 || size > 100) {
         rangeMsg.innerText = "Range [1-100] only";
         rangeMsg.setAttribute("style", "color: red;");
     }
