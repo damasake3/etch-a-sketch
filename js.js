@@ -48,6 +48,18 @@ function clearSquares() {
     }
 }
 
+function generateRGB() {
+    let rgbCombo = [];
+    let rgb;
+    for (let i = 0; i < 3; i++) {
+        rgb = Math.floor(Math.random() * 255) + 1;
+        rgbCombo.push(rgb);
+    }
+
+    console.log(rgbCombo);
+    return `rgb(${rgbCombo[0]}, ${rgbCombo[1]}, ${rgbCombo[2]})`;
+}
+
 container.addEventListener("mouseover", (e) => {
     let target = e.target;
 
@@ -55,7 +67,18 @@ container.addEventListener("mouseover", (e) => {
         console.log(`Hovering ${target.id} ${target.className}`);
         let hoverSquare = document.getElementById(target.id);
 
-        hoverSquare.setAttribute("class", "flex-square hovered");
+        if (colorMode == colorModes[0]) {
+            console.log(`Using Color Mode: ${colorMode}`);
+            hoverSquare.style.backgroundColor = "blue";
+        }
+        else if (colorMode == colorModes[1]) {
+            console.log(`Using Color Mode: ${colorMode}`);
+            hoverSquare.style.backgroundColor = "black";
+        }
+        else if (colorMode == colorModes[2]) {
+            console.log(`Using Color Mode: ${colorMode}`);
+            hoverSquare.style.backgroundColor = `${generateRGB()}`;
+        }
 
     }
 
@@ -67,7 +90,7 @@ rangeInput.addEventListener("keydown", (e) => {
     }
 });
 
-rangeInput.addEventListener("keyup", (e) =>{
+rangeInput.addEventListener("keyup", (e) => {
     let value = e.target.value;
     if (e.code == "Enter") {
         generateSquares(value);
@@ -80,15 +103,18 @@ menu.addEventListener("click", (e) => {
     switch (target.id) {
         case "blackBtn":
             console.log("BlackBtn clicked!");
+            colorMode = colorModes[1];
             break;
         case "rgbBtn":
             console.log("RgbBtn clicked!");
+            colorMode = colorModes[2];
             break;
         case "normalBtn":
             console.log("NormalBtn clicked!");
+            colorMode = colorModes[0];
             break;
     }
-    
+
 });
 
 initializeSquares();

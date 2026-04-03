@@ -38,9 +38,6 @@ body {
     box-sizing: border-box; /*Makes the border come inside instead of outside*/
 }
 
-.hovered {
-    background-color: blue !important;
-}
 
 .btn {
     cursor: pointer;
