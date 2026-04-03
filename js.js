@@ -4,6 +4,18 @@ const rangeInput = document.querySelector("#range");
 const rangeMsg = document.querySelector("#rangeMsg");
 square.setAttribute("class", "flex-square");
 
+const menu = document.querySelector("#menu");
+
+const colorModes = [
+    "Default", "Black", "RGB"
+];
+
+for (const mode of colorModes) console.log(mode);
+
+let colorMode = colorModes[0];
+
+console.log(`Color Mode: ${colorMode}`);
+
 function initializeSquares() {
     generateSquares(16);
 }
@@ -60,6 +72,23 @@ rangeInput.addEventListener("keyup", (e) =>{
     if (e.code == "Enter") {
         generateSquares(value);
     }
+});
+
+menu.addEventListener("click", (e) => {
+    let target = e.target;
+
+    switch (target.id) {
+        case "blackBtn":
+            console.log("BlackBtn clicked!");
+            break;
+        case "rgbBtn":
+            console.log("RgbBtn clicked!");
+            break;
+        case "normalBtn":
+            console.log("NormalBtn clicked!");
+            break;
+    }
+    
 });
 
 initializeSquares();
