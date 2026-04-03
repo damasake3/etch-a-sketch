@@ -14,7 +14,7 @@
     <div class="flex-container" style="flex-direction: column; flex-grow: 1;">
         <h1 style="text-align: center;">Etch-A-Sketch</h1>
 
-        <div class="flex-container" style="gap: 10px;">
+        <div class="flex-container" style="flex-direction: column; gap: 10px;">
 
             <form>
                 <label for="range">Set Range:</label>
@@ -22,6 +22,14 @@
                 <button type="button" class="btn" onclick="generateSquares(range.value)">Submit</button>
                 <div id="rangeMsg"></div>
             </form>
+
+            <h3 style="margin: 0px;">Color Options:</h3>
+
+            <div id="menu">
+                <button class="btn option" id="blackBtn">Black</button>
+                <button class="btn option" id="rgbBtn">RGB </button>
+                <button class="btn option" id="normalBtn">Normal</button>
+            </div>
 
         </div>
 

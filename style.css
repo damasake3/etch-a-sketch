@@ -38,10 +38,15 @@ body {
     box-sizing: border-box; /*Makes the border come inside instead of outside*/
 }
 
-.hovered {
-    background-color: blue !important;
-}
 
 .btn {
     cursor: pointer;
+}
+
+.option {
+    align-self: flex-start;
+    text-align: center;
+
+    width: 70px;
+    padding: 0px 5px;
 }
